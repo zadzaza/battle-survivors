@@ -115,10 +115,10 @@ texture = ExtResource("1_wcmd4")
 offset = Vector2(2.08165e-12, -4)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "swing"
 libraries = {
 "": SubResource("AnimationLibrary_ysa1j")
 }
+autoplay = "swing"
 
 [node name="HitboxComponent" parent="." instance=ExtResource("2_x5lrb")]
 
