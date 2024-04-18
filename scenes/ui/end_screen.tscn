@@ -131,7 +131,7 @@ layout_mode = 2
 [node name="ContinueButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_0g1dd")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Продожлить"
+text = "Продолжить"
 
 [node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_0g1dd")]
 unique_name_in_owner = true

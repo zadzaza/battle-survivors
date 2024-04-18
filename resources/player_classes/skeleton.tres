@@ -9,4 +9,4 @@ max_level = 10
 experience_cost = 10
 texture_path = "res://assets/player/skins/skeleton.png"
 title = "Skeleton"
-description = "You are a Skeleton?"
+description = "Вы скелет?"

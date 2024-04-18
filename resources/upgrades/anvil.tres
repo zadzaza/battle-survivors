@@ -8,5 +8,5 @@ script = ExtResource("2_l3x56")
 ability_controller_scene = ExtResource("1_nhwlj")
 id = "anvil"
 max_quantity = 1
-name = "Anvil"
-description = "Periodically drops anvils on enemies."
+name = "Наковальня"
+description = "Периодически сбрасывает наковальни на врагов."

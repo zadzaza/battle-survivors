@@ -8,5 +8,5 @@ id = "archer"
 max_level = 10
 experience_cost = 10
 texture_path = "res://assets/player/skins/archer.png"
-title = "Archer"
-description = "Shoots arrows to the knees"
+title = "Лучник"
+description = "Стреляет стрелами в колени."

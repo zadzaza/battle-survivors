@@ -66,10 +66,10 @@ upgrade_card_scene = ExtResource("1_8w6fa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../ColorRect")
-autoplay = "in"
 libraries = {
 "": SubResource("AnimationLibrary_567xs")
 }
+autoplay = "in"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

@@ -8,4 +8,4 @@ id = "health_regeneration"
 max_quantity = 3
 experience_cost = 100
 title = "Health Regeneration"
-description = "Regenerates 1 HP per level every 30 seconds"
+description = "Регенерирует 1 HP за уровень каждые 30 секунд"

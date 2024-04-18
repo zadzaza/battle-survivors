@@ -9,4 +9,4 @@ max_level = 10
 experience_cost = 10
 texture_path = "res://assets/player/skins/knight.png"
 title = "Knight"
-description = "A proud knight with no king."
+description = "Гордый рыцарь без короля."

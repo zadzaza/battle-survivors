@@ -59,10 +59,9 @@ func play_animation(direction: Vector2) -> void:
 		visuals.scale = Vector2(move_sign, 1)
 
 func get_movement_vector() -> Vector2:
-	var x_movement = Input.get_action_strength('move_right') - Input.get_action_strength('move_left')
-	var y_movement = Input.get_action_strength('move_down') - Input.get_action_strength('move_up')
+	var movement = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
-	return Vector2(x_movement, y_movement)
+	return Vector2(movement)
 
 func check_deal_damage() -> void:
 	if number_colliding_bodies == 0 || !damage_interval_timer.is_stopped(): return
