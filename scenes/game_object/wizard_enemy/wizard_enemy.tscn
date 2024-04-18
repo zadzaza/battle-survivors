@@ -138,10 +138,10 @@ collision_mask = 9
 script = ExtResource("1_oyyxi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "walk"
 libraries = {
 "": SubResource("AnimationLibrary_db5o2")
 }
+autoplay = "walk"
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_hj65g")]
 max_health = 20.0

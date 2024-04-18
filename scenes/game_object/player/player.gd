@@ -19,6 +19,7 @@ var number_colliding_bodies: int = 0
 var base_speed = 0
 
 func _ready() -> void:
+	health_bar.hide()
 	player_texture.set_player_skin(ClassManager.current_class.texture_path)
 	
 	health_bar.visible = !town_mode
@@ -68,6 +69,7 @@ func check_deal_damage() -> void:
 	
 	health_component.damage(1)
 	damage_interval_timer.start()
+
 
 func update_health_display():
 	health_bar.value = health_component.get_health_percent()
