@@ -7,6 +7,14 @@
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_ksehv")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.607843, 0.298039, 0.639216, 0.388235)
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-17, -10)
 tile_set = ExtResource("1_0o5o1")
@@ -41,33 +49,34 @@ size_flags_vertical = 4
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 32
-text = "Arena Survivor"
+text = "Battle Survivors
+"
 
 [node name="PlayButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_1uuht")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Play
+text = "Играть
 "
 
 [node name="ClassButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_1uuht")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Character
+text = "Герои
 "
 
 [node name="UpgradesButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_1uuht")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Upgrades"
+text = "Улучшения"
 
 [node name="OptionsButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_1uuht")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Options
+text = "Настройки
 "
 
 [node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_1uuht")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Quit
+text = "Выйти
 "

@@ -110,7 +110,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 32
-text = "Victory
+text = "Победа
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -120,7 +120,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 24
-text = "You Won!
+text = "Вы победили!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -131,12 +131,12 @@ layout_mode = 2
 [node name="ContinueButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_0g1dd")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Continue"
+text = "Продожлить"
 
 [node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_0g1dd")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Quit to Menu
+text = "Главное Меню
 "
 
 [node name="DefeatStreamPlayer" type="AudioStreamPlayer" parent="."]
