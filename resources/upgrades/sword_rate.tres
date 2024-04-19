@@ -6,5 +6,5 @@
 script = ExtResource("1_mkog4")
 id = "sword_rate"
 max_quantity = 5
-name = "Sword Quickness"
-description = "Increases sword attack rate by 10%"
+name = "Скорость атаки мечом"
+description = "Увеличивает скорость атаки мечом на 10%"

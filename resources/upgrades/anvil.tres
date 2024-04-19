@@ -9,4 +9,4 @@ ability_controller_scene = ExtResource("1_nhwlj")
 id = "anvil"
 max_quantity = 1
 name = "Наковальня"
-description = "Периодически сбрасывает наковальни на врагов."
+description = "Периодически сбрасывает наковальни на врагов"

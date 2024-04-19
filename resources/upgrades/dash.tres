@@ -6,5 +6,5 @@
 script = ExtResource("1_e1sdf")
 id = "dash"
 max_quantity = 1
-name = "Dash"
-description = "Gives the player the ability to Dash"
+name = "Рывок"
+description = "Дает герою навык \"рывок\""

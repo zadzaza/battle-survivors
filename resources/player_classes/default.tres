@@ -9,5 +9,6 @@ max_level = 10
 experience_cost = 10
 max_health = 4.0
 texture_path = "res://assets/player/skins/default.png"
-title = "No class"
-description = "Вы никто."
+title = "Никто"
+description = "Вы никто
+Здоровье: 4 HP"

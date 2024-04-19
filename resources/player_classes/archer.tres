@@ -10,4 +10,5 @@ experience_cost = 10
 max_health = 7.0
 texture_path = "res://assets/player/skins/archer.png"
 title = "Лучник"
-description = "Стреляет стрелами в колени."
+description = "Стреляет в колени
+Здоровье: 7 HP"

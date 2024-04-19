@@ -7,5 +7,5 @@ script = ExtResource("1_msap8")
 id = "experience_gain"
 max_quantity = 10
 experience_cost = 50
-title = "Increase Experience"
+title = "Увеличение опыта"
 description = "Увеличивает шанс выпадения зелий опыта на 10%"

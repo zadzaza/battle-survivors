@@ -138,7 +138,7 @@ theme_type_variation = &"AlternatePanelContainer"
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 20
 text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -155,6 +155,7 @@ stretch_mode = 3
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
+theme_override_font_sizes/font_size = 15
 text = "Write some description here"
 autowrap_mode = 2
 
