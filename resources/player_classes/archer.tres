@@ -7,6 +7,7 @@ script = ExtResource("1_e1vxo")
 id = "archer"
 max_level = 10
 experience_cost = 10
+max_health = 7.0
 texture_path = "res://assets/player/skins/archer.png"
 title = "Лучник"
 description = "Стреляет стрелами в колени."

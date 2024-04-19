@@ -97,15 +97,16 @@ motion_mode = 1
 script = ExtResource("1_huj3o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "walk"
 libraries = {
 "": SubResource("AnimationLibrary_whvla")
 }
+autoplay = "walk"
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_sliiy")]
+default_max_health = 15.0
 
 [node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_3hkfu")]
-drop_percent = 0.35
+drop_percent = 0.25
 health_component = NodePath("../HealthComponent")
 
 [node name="VelocityComponent" parent="." instance=ExtResource("4_jyghh")]

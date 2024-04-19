@@ -7,6 +7,7 @@ script = ExtResource("1_18b8q")
 id = "knight"
 max_level = 10
 experience_cost = 10
+max_health = 10.0
 texture_path = "res://assets/player/skins/knight.png"
 title = "Knight"
 description = "Гордый рыцарь без короля."

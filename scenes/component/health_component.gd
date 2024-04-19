@@ -5,8 +5,16 @@ signal died
 signal health_changed
 signal health_decreased
 
-@export var max_health: float = 10
+@export var default_max_health: float = 10 # Значение по умолчанию для max_health если player_class не найден или родитель не Player.
 var current_health: float
+var player_class
+@onready var max_health: float = get_max_health()
+
+func get_max_health() -> float:
+	player_class = ClassManager.get_player_class()
+	if player_class != null and get_parent() is Player:
+		return player_class.max_health
+	return default_max_health
 
 func _ready() -> void:
 	current_health = max_health

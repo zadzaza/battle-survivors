@@ -144,7 +144,7 @@ libraries = {
 autoplay = "walk"
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_hj65g")]
-max_health = 20.0
+default_max_health = 30.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("2_5pjsd")]
 max_speed = 60
