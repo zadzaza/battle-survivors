@@ -1,7 +1,7 @@
 extends Node
 
 func _ready():
-	GameEvents.experience_vial_collected.connect(on_experience_collected)
+	GameEvents.vial_collected.connect(on_experience_collected)
 
 func add_meta_upgrade(upgrade: MetaUpgrade):
 	if not SaveManager.save_data['player']['meta_upgrades'].has(upgrade.id):

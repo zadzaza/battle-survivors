@@ -4,20 +4,33 @@ class_name HealthComponent
 signal died
 signal health_changed
 signal health_decreased
+signal health_increment(number: float)
 
-@export var default_max_health: float = 10 # Значение по умолчанию для max_health если player_class не найден или родитель не Player.
+@export var default_max_health: float = 10 # Значение по умолчанию для max_health если player_class не найден или родитель не Player
+
 var current_health: float
 var player_class
+
+@onready var experience_manager: ExperienceManager
 @onready var max_health: float = get_max_health()
 
 func get_max_health() -> float:
 	player_class = ClassManager.get_player_class()
-	if player_class != null and get_parent() is Player:
+	if check_is_player():
 		return player_class.max_health
 	return default_max_health
 
 func _ready() -> void:
 	current_health = max_health
+	GameEvents.vial_collected.connect(on_health_increment)
+
+func on_health_increment(number: float, vial_type: String):
+	if check_is_player():
+		if vial_type == "health_vial":
+			if current_health < get_max_health():
+				current_health += number
+				health_changed.emit()
+			else: pass
 
 func damage(damage_amount: float) -> void:
 	current_health = clamp(current_health - damage_amount, 0, max_health)

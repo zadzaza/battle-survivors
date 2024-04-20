@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr8aukhijeybf"
-path="res://.godot/imported/experience_vial.png-dbf1ea34f61212251cf060e6e03a4355.ctex"
+path="res://.godot/imported/experience_vial.png-aea5b76d21b561641da830fefd83a1c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_object/experience_vial/experience_vial.png"
-dest_files=["res://.godot/imported/experience_vial.png-dbf1ea34f61212251cf060e6e03a4355.ctex"]
+source_file="res://scenes/game_object/vials/experience_vial.png"
+dest_files=["res://.godot/imported/experience_vial.png-aea5b76d21b561641da830fefd83a1c4.ctex"]
 
 [params]
 
