@@ -27,10 +27,7 @@ func _ready() -> void:
 func on_health_increment(number: float, vial_type: String):
 	if check_is_player():
 		if vial_type == "health_vial":
-			if current_health < get_max_health():
-				current_health += number
-				health_changed.emit()
-			else: pass
+			heal(number)
 
 func damage(damage_amount: float) -> void:
 	current_health = clamp(current_health - damage_amount, 0, max_health)

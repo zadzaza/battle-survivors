@@ -104,8 +104,10 @@ func on_ability_upgrade_added(ability_upgrade: AbilityUpgrade, current_upgrades:
 		velocity_component.max_speed = base_speed + (base_speed * current_upgrades["player_speed"]["quantity"] * .1)
 
 func on_arena_difficulty_increased(difficulty: int):
-	var health_regeneration_quantity = MetaProgression.get_upgrade_count('health_regeneration')
-	if health_regeneration_quantity > 0:
-		var is_thirty_second_interval = (difficulty % 6) == 0
-		if is_thirty_second_interval:
-			health_component.heal(health_regeneration_quantity)
+	#var health_regeneration_quantity = MetaProgression.get_upgrade_count('health_regeneration')
+	#if health_regeneration_quantity > 0:
+		#var is_thirty_second_interval = (difficulty % 6) == 0
+		#if is_thirty_second_interval:
+			#health_component.heal(health_regeneration_quantity)
+			
+	pass

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://cjvhocw2prv3x"]
 
-[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_ijvyp"]
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_sl2eq"]
 
 [resource]
-script = ExtResource("1_ijvyp")
+script = ExtResource("1_sl2eq")
 id = "health_regeneration"
 max_quantity = 3
 experience_cost = 100
