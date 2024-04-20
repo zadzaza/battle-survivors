@@ -25,6 +25,7 @@ func collect():
 	GameEvents.emit_experience_vial_collected(1)
 	queue_free()
 
+
 func disable_collision():
 	collision.disabled = true
 

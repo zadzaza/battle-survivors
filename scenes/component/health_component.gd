@@ -37,3 +37,9 @@ func check_death():
 	if current_health == 0:
 		died.emit()
 		owner.queue_free()
+
+func check_is_player():
+	if player_class != null and get_parent() is Player:
+		return true
+	else:
+		return false
