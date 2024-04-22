@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://wbnh0hso5a3t"]
+
+[ext_resource type="Texture2D" uid="uid://w421nu1ngi1j" path="res://assets/ui/big_circle.png" id="1_1v4f5"]
+[ext_resource type="Script" path="res://scenes/game_object/mobile/joystick.gd" id="1_m8aix"]
+[ext_resource type="Texture2D" uid="uid://dc5kdupf3ygxd" path="res://assets/ui/small_circle.png" id="2_8gpb5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h7le7"]
+radius = 26.3059
+
+[node name="Joystick" type="Area2D"]
+script = ExtResource("1_m8aix")
+
+[node name="BigCircle" type="Sprite2D" parent="."]
+texture = ExtResource("1_1v4f5")
+
+[node name="SmallCircle" type="Sprite2D" parent="BigCircle"]
+texture = ExtResource("2_8gpb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h7le7")

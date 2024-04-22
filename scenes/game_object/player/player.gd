@@ -13,9 +13,10 @@ class_name Player
 @onready var animation_player = $AnimationPlayer
 @onready var visuals = $Visuals
 @onready var velocity_component: VelocityComponent = $VelocityComponent
-@onready var dash_component: DashComponent = $DashComponent 
-
+@onready var dash_component: DashComponent = $DashComponent
+@onready var joystick = $UI/Joystick
 @onready var new_health_value = health_component.current_health
+@onready var os_name = OS.get_name()
 
 
 var number_colliding_bodies: int = 0
@@ -29,7 +30,7 @@ func _ready() -> void:
 	if not town_mode:
 		arena_time_manager.arena_difficulty_increased.connect(on_arena_difficulty_increased)
 		
-	
+		
 	base_speed = velocity_component.max_speed
 	
 	hurtbox_area.body_entered.connect(on_body_entered)
@@ -43,13 +44,20 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var movement_vector = get_movement_vector()
 	var direction = movement_vector.normalized()
-
-	velocity_component.accelerate_in_direction(
-		Vector2(sign(movement_vector.x), (movement_vector.y)).normalized(), dash_component.speed, dash_component.acceleration
-	) if dash_component.dashing else velocity_component.accelerate_in_direction(direction) 
+	
+	var speed_scale = movement_vector.length() # Получаем длину вектора скорости, чтобы использовать её как множитель скорости
+	var current_speed = base_speed * speed_scale
+	
+	if dash_component.dashing:
+		velocity_component.accelerate_in_direction(
+		direction, dash_component.speed, dash_component.acceleration
+		)
+	else:
+		velocity_component.accelerate_in_direction(direction, current_speed)
 	
 	velocity_component.move(self)
 	play_animation(movement_vector)
+	print(current_speed)
 
 func play_animation(direction: Vector2) -> void:
 	if not dash_component.dashing:
@@ -65,7 +73,14 @@ func play_animation(direction: Vector2) -> void:
 func get_movement_vector() -> Vector2:
 	var movement = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
-	return Vector2(movement)
+	var vector: Vector2
+	
+	if os_name == "Windows":
+		vector = Vector2(movement)
+	if os_name == "Android":
+		vector = joystick.get_velocity()
+	
+	return vector
 
 func check_deal_damage() -> void:
 	if number_colliding_bodies == 0 || !damage_interval_timer.is_stopped(): return

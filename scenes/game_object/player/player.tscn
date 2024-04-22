@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dermboxi5ld4"]
+[gd_scene load_steps=25 format=3 uid="uid://dermboxi5ld4"]
 
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_x14sp"]
 [ext_resource type="PackedScene" uid="uid://bnh7burb0h2aa" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_5r485"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ok3qiorsyuj" path="res://scenes/game_object/player/player_texture.tscn" id="13_1xm0l"]
 [ext_resource type="PackedScene" uid="uid://uvsk5gj4gosp" path="res://scenes/ability/dash_ability_controller/dash_ability_controller.tscn" id="13_w8p8k"]
 [ext_resource type="PackedScene" uid="uid://dmeg130ky6u4g" path="res://scenes/game_object/player/health_bar.tscn" id="14_luvnp"]
+[ext_resource type="PackedScene" uid="uid://wbnh0hso5a3t" path="res://scenes/game_object/mobile/joystick.tscn" id="16_5c5bp"]
 
 [sub_resource type="Animation" id="Animation_sx8y2"]
 length = 0.001
@@ -259,3 +260,8 @@ shape = SubResource("CircleShape2D_1b1s0")
 
 [node name="DashEffect" parent="." instance=ExtResource("13_w8p8k")]
 z_index = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Joystick" parent="UI" instance=ExtResource("16_5c5bp")]
+position = Vector2(92, 290)
