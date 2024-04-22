@@ -15,6 +15,9 @@ class_name Player
 @onready var velocity_component: VelocityComponent = $VelocityComponent
 @onready var dash_component: DashComponent = $DashComponent 
 
+@onready var new_health_value = health_component.current_health
+
+
 var number_colliding_bodies: int = 0
 var base_speed = 0
 

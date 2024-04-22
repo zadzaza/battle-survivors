@@ -4,7 +4,6 @@ class_name HealthComponent
 signal died
 signal health_changed
 signal health_decreased
-signal health_increment(number: float)
 
 @export var default_max_health: float = 10 # Значение по умолчанию для max_health если player_class не найден или родитель не Player
 

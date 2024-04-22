@@ -9,12 +9,12 @@ var player_class: PlayerClass
 
 func _ready() -> void:
 	select_button.pressed.connect(on_select_pressed)
+	ClassManager.class_selected.connect(on_class_selected)
 
-func play_in(delay: float = 0) -> void:
+func play_in() -> void:
 	modulate = Color.TRANSPARENT
-	await get_tree().create_timer(delay).timeout
 	modulate = Color.WHITE
-	$AnimationPlayer.play('in')
+	$AnimationPlayer.play('selected')
 
 func update_progress():
 	pass
@@ -25,5 +25,12 @@ func set_class_card(class_id):
 	texture.texture = load(player_class.texture_path)
 	description_label.text = player_class.description
 
+func on_class_selected(selected_class_id: String) -> void:
+	if player_class.id == selected_class_id:
+		select_button.text = "Выбрано"
+	else:
+		select_button.text = "Выбрать"
+
 func on_select_pressed():
 	ClassManager.set_class(player_class.id)
+	play_in()

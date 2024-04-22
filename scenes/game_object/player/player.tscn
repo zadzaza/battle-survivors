@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://pwibcmv2na4x" path="res://scenes/component/shadow_component.tscn" id="12_d7a52"]
 [ext_resource type="PackedScene" uid="uid://c6ok3qiorsyuj" path="res://scenes/game_object/player/player_texture.tscn" id="13_1xm0l"]
 [ext_resource type="PackedScene" uid="uid://uvsk5gj4gosp" path="res://scenes/ability/dash_ability_controller/dash_ability_controller.tscn" id="13_w8p8k"]
+[ext_resource type="PackedScene" uid="uid://dmeg130ky6u4g" path="res://scenes/game_object/player/health_bar.tscn" id="14_luvnp"]
 
 [sub_resource type="Animation" id="Animation_sx8y2"]
 length = 0.001
@@ -188,15 +189,6 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_pnbmn"]
 radius = 32.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5crne"]
-bg_color = Color(0.88, 0.315333, 0.264, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.247059, 0.14902, 0.192157, 1)
-corner_detail = 18
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_wo6bm"]
 radius = 7.0
 
@@ -249,17 +241,7 @@ shape = SubResource("CircleShape2D_pnbmn")
 [node name="PlayerTexture" parent="Visuals" instance=ExtResource("13_1xm0l")]
 unique_name_in_owner = true
 
-[node name="HealthBar" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(32, 6)
-offset_left = -16.0
-offset_top = -25.0
-offset_right = 16.0
-offset_bottom = -19.0
-pivot_offset = Vector2(16, 3)
-theme_override_styles/fill = SubResource("StyleBoxFlat_5crne")
-max_value = 1.0
-value = 0.5
-show_percentage = false
+[node name="HealthBar" parent="." instance=ExtResource("14_luvnp")]
 
 [node name="CollisionArea2D" type="Area2D" parent="."]
 visible = false

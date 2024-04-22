@@ -9,13 +9,13 @@ extends Node2D
 var vial_type = "unknown"
 
 func _ready():
-	area_range.area_entered.connect(on_area_entered)	
+	area_range.area_entered.connect(on_area_entered)
 	choose_vial_type()
 	
 func choose_vial_type():
 	rng.randomize()
 	
-	if rng.randf() < 0.50:
+	if rng.randf() < 0.97:
 		texture.texture = load("res://scenes/game_object/vials/experience_vial.png")
 	else:
 		texture.texture = load("res://scenes/game_object/vials/health_vial.png")
